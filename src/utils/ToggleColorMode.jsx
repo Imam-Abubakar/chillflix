@@ -22,6 +22,14 @@ const ToggleColorrMode = ({ children }) => {
              },
            },
          },
+         MuiButton: {
+            styleOverrides: {
+              root: {
+                color: '#028d92',
+              },
+            },
+          },
+
        },
    }),[mode]);
 

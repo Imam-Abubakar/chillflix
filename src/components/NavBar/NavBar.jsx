@@ -64,8 +64,9 @@ const NavBar = () => {
           </IconButton>
           { !isMobile && <Search></Search> }
           <div>
+            {/*
             {!isAuthenticated ? (
-              <Button color='inherit' onClick={fetchToken}>
+              <Button color='secondary' onClick={fetchToken}>
                 Login &nbsp; <AccountCircle></AccountCircle>
               </Button>
             ) : (
@@ -81,6 +82,7 @@ const NavBar = () => {
                 />
               </Button>
             )}
+            */}
           </div>
           { isMobile && <Search></Search> }
         </Toolbar>
