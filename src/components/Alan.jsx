@@ -1,11 +1,11 @@
 import React, { useEffect, useContext } from 'react';
-import { ColorModeContext } from '../utils/ToggleColoMode';
+import { ColorModeContext } from '../utils/ToggleColorMode';
 import { fetchToken } from '../utils';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 import alanBtn from '@alan-ai/alan-sdk-web';
-import { searchMovie, selectGenreOrCategory } from '../features/currentGenreOrCategory';
+import { searchMovie, selectGenreOrCategory } from '../store/currentGenreOrCategory';
 
 const useAlan = () => {
    const { setMode } = useContext(ColorModeContext);

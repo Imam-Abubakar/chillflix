@@ -5,11 +5,11 @@ import { NavLink } from 'react-router-dom';
 import { useTheme } from '@mui/material/styles';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { setUser, userSelector } from '../../features/auth';
+import { setUser, userSelector } from '../../store/auth';
 import useStyles from './styles';
 import { Sidebar, Search } from '..';
 import { fetchToken, createSessionId, moviesApi } from '../../utils';
-import { ColorModeContext } from '../../utils/ToggleColoMode';
+import { ColorModeContext } from '../../utils/ToggleColorMode';
 
 const NavBar = () => {
   const classes = useStyles();
@@ -46,7 +46,7 @@ const NavBar = () => {
 
    return (
     <>
-      <AppBar position='fixed'>
+      <AppBar  position='fixed'>
         <Toolbar className={classes.toolbar}>
           { isMobile && (
             <IconButton 

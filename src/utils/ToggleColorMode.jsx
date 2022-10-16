@@ -3,7 +3,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 export const ColorModeContext = createContext();
 
-const ToggleColoMode = ({ children }) => {
+const ToggleColorrMode = ({ children }) => {
    const [mode, setMode] = useState('light');
 
    const toggleColorMode = () => {
@@ -14,6 +14,15 @@ const ToggleColoMode = ({ children }) => {
       palette: {
          mode,
       },
+      components: {
+         MuiAppBar: {
+           styleOverrides: {
+             root: {
+               background: '#028d92',
+             },
+           },
+         },
+       },
    }),[mode]);
 
    return (
@@ -25,4 +34,4 @@ const ToggleColoMode = ({ children }) => {
   )
 }
 
-export default ToggleColoMode
+export default ToggleColorrMode

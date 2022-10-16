@@ -5,12 +5,12 @@ import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import genreIcons from '../../assets/genres';
-import { selectGenreOrCategory } from '../../features/currentGenreOrCategory';
+import { selectGenreOrCategory } from '../../store/currentGenreOrCategory';
 import { MovieList } from '..';
 
 import { useGetListQuery, useGetMovieQuery, useGetRecommendationsQuery } from '../../services/TMDB';
 import useStyles from './styles';
-import { userSelector } from '../../features/auth';
+import { userSelector } from '../../store/auth';
 
 const MovieInfo = () => {
    const { id } = useParams();

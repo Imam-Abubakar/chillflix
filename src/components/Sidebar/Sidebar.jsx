@@ -7,7 +7,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useGetGenresQuery } from '../../services/TMDB';
 import useStyles from './styles';
 import genreIcons from '../../assets/genres';
-import { selectGenreOrCategory } from '../../features/currentGenreOrCategory';
+import logo from '../../assets/images/logo.png'
+import { selectGenreOrCategory } from '../../store/currentGenreOrCategory';
 
 const categories = [
    { label: 'Popular', value: 'popular' },
@@ -34,8 +35,8 @@ const Sidebar = ({ setMobileOpen }) => {
       <Link to='/' className={classes.imageLink}>
          <img
             className={classes.image}
-            src={theme.palette.mode === 'light' ? redLogo : blueLogo}
-            alt='Filmpire Logo'
+            src={logo}
+            alt='ChillFlix Logo'
          />
       </Link>
       <Divider/>

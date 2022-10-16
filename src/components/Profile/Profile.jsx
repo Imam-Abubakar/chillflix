@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { Typography, Button, Box } from '@mui/material';
 import { ExitToApp } from '@mui/icons-material';
 
-import { userSelector } from '../../features/auth';
+import { userSelector } from '../../store/auth';
 import { useGetListQuery } from '../../services/TMDB';
 import { RatedCards } from '..';
 
